@@ -1,0 +1,73 @@
+* {
+    /* Essas linhas de código estão definindo as propriedades de estilo CSS para um elemento HTML */
+    margin: 0; /* Está linha define a margem como 0 - Removendo assim a margem ao redor do elemento */
+    padding: 0; /* está linha definindo a propriedade de preenchimento como 0 - Removendo qualquer espaço em branco dentro do elemento para assim garantir que o mesmo começe apartir do canto superiror esquerdo*/
+    box-sizing: border-box; /* Essa linha está definindo o modelo de caixa para o elemento "border-box" - Resultando que o tamanho total do elemento seja o mesmo independete da largura da borda */
+}
+
+.game-board { /* Essas linhas de código estão definindo as propriedades de estilo CSS para uma div com a classe "game-board" */
+    width: 100%; /* Está linha define a largura da div como 100% da largura da janela do navegador */
+    height: 500px; /* Está define a altura da div como 500 pixels */
+    /*border: 1px solid #333; /* Está define a borda da div como uma linha sólida de 1 pixel de largura coma cor cinza escuro */
+    border-bottom: 15px solid green;
+    margin: 0 auto; /* Essa está definindo as margens superior e inferior da div como 0 e as margens da esquerda e direita como automaticas - isso centraliza a div  */
+    position: relative; /* !!! */
+    overflow: hidden; /* Tudo que estiver fora das delimitações não aparecer mais na tela */
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe { /* Trazendo a PNG do pipe para ser configurada */
+    position: absolute; /* !!! */
+    bottom: 0; /* Define a distância entre a borda inferior  */
+    width: 70px; /* Define a largura do elemento - Tamanho horizontal  */
+    animation: pipe-animation 1s infinite linear; /* colocamos a animação criada - colocamos a duração dela - colocamos para ela acontecer em loop - colocamos para ela realizar o movimento continua  */
+}
+
+.mario{
+    width: 120px;
+    position: absolute;
+    bottom: 0px;
+
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+
+}
+
+.clouds{
+width: 550px;
+right: 10000px;
+}
+
+@keyframes pipe-animation { 
+    from {
+    right: -80px;/* Aqui vai uma dica para a gnt fazer o objeto não surgir do canto e sumir dps a gnt coloca a mesma quantidade de px da largura dele */  
+    }
+
+    to {
+right: 100%;
+    }
+}
+
+@keyframes jump {
+0% {
+    bottom: 0;
+}
+
+40% {
+    bottom: 180px;
+}
+
+50% {
+    bottom: 180px;
+}
+
+60% {
+    bottom: 180px;
+}
+
+100% {
+    bottom: 0;
+}
+}

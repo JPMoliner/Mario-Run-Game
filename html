@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Informações importantes - elas dizem como a página será exibida e interpretada pelo navegador  -->
+
+    <meta charset="UTF-8" /> <!-- Especifica o conjunto de caracteres - Especificar é importante para garantir que os caracteres sejam exibidos corretamente na pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Name: especifica o nome do metadado - Content: Especifica o valor do metadado --> 
+     <!-- width=device-width, initial-scale=1.0: Indica que a largura da pagina deve corresponder com a largura da do dispotivo do usuário - Para a página não ficar cortada --> 
+
+<!-- Essas duas linhas estão importando os arquivos de estilo(style.css) e um de script(script.js) -->
+
+    <link rel="stylesheet" href="./css/style.css"> <!-- A tag <link> adiciona o arquivo "style.css" - O atributo "Rel" indica o tipo de relacionamento entre o documento atual e o recurso externo ( o valor "stylesheet" indica que o recurso é um arquivo CSS ) - O atributo "href" especifica o caminho para o recurso externo-->
+    <script src="./js/script.js" defer></script> <!-- A tag <script> adiciona o arquivo - O atributo "src" especifica o caminho para o arquivo de script - O atributo "defer" é opcional e indica que o script deve ser executado somente após o documento HTML ser totalmente analisado pelo navegador  -->
+    
+
+    <title>Mario Jump</title>
+</head>
+<body>
+
+    <div class="game-board"> -<!-- Dentro dessa tag estamos agrupando o outros elementos - onde o jogo irá rodar  -->
+        
+        <img src="./imagens/" class="mario">
+        <img src="./imagens/" class="pipe"> <!-- A tag <img> está inserindo uma imagem na página o atributo "src" está definindo o caminho que a imagem será exibida ( O ./ inidica que o arquvivo está localizado na pasta raiz do projeto ) -->
+        <img src="./imagens/clouds.png" class="clouds"> 
+        
+    </div>
+
+</body>
+</html> 
